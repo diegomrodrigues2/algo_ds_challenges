@@ -310,5 +310,8 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 
 ### General Tree Conversion
 
+### Prefix Sums
+
+- `prefix_set_intersection.py` - calcular intersec\u00e7\u00e3o de conjuntos prefixados.
 - `convert_to_binary.py` - converter uma árvore geral para binária.
 - `binary_to_general.py` - converter uma árvore binária na representação filho à esquerda/irmão à direita para uma árvore geral.
