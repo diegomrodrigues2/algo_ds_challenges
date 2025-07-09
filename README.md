@@ -237,6 +237,11 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `nivel_ordem.py` - percorrer a \xc3\xa1rvore em ordem de n\xc3\xadvel.
 - `is_valid_bst.py` - verificar se uma \xc3\xa1rvore \xc3\xa9 uma BST v\xc3\xa1lida.
 
+### AVL Trees
+
+- `insert_avl.py` - inserir valores mantendo o balanceamento AVL.
+- `is_avl_tree.py` - verificar se uma \xc3\xa1rvore atende \xc3\xa0s propriedades AVL.
+
 ### Queues
 
 - `simple_queue.py` - fila b\xc3\xa1sica com opera\xc3\xa7\xc3\xb5es de enfileirar e desenfileirar.
