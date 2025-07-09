@@ -253,6 +253,11 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `rotate_left.py` - realizar rotação à esquerda de um nó.
 - `rotate_right.py` - realizar rotação à direita de um nó.
 
+### Árvores Rubro-Negras
+
+- `insert_red_black.py` - inserir valor mantendo as propriedades Rubro-Negras.
+- `is_valid_red_black.py` - validar se a árvore segue as regras Rubro-Negras.
+
 ### Queues
 
 - `simple_queue.py` - fila b\xc3\xa1sica com opera\xc3\xa7\xc3\xb5es de enfileirar e desenfileirar.
