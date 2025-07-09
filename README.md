@@ -235,8 +235,11 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 
 - `balance_bst.py` - balancear uma BST desbalanceada.
 - `nivel_ordem.py` - percorrer a \xc3\xa1rvore em ordem de n\xc3\xadvel.
-- `is_valid_bst.py` - verificar se uma \xc3\xa1rvore \xc3\xa9 uma BST v\xc3\xa1lida.
+- `is_valid_bst.py` - verificar se uma árvore é uma BST válida.
 - `lowest_common_ancestor.py` - encontrar o menor ancestral comum de dois nós.
+- `in_ordem.py` - percorrer a árvore em ordem.
+- `pre_ordem.py` - percorrer a árvore em pré-ordem.
+- `pos_ordem.py` - percorrer a árvore em pós-ordem.
 
 ### Queues
 
@@ -249,4 +252,9 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `validate_parentheses.py` - verificar se uma sequência de parênteses está balanceada.
 - `min_stack.py` - pilha que retorna o valor mínimo em O(1).
 - `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
+
+### General Tree Conversion
+
+- `convert_to_binary.py` - converter uma árvore geral para binária.
+- `binary_to_general.py` - converter uma árvore binária na representação filho à esquerda/irmão à direita para uma árvore geral.
 
