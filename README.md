@@ -223,7 +223,7 @@ Com essa configuração, o repositório de estudos de algoritmos atenderá às n
 
 Em conclusão, as instruções acima servem para configurar o agente de forma clara e objetiva. Ao segui-las, o agente Codex deve conseguir transformar um conceito teórico em um conjunto concreto de desafios de programação no repositório, com tudo o que é necessário para praticar (menos a parte de escrever a solução, que fica como exercício do usuário). Esse equilíbrio permite **estudo ativo** e focado: o usuário gasta tempo pensando e codando soluções, enquanto o agente cuida da geração dos problemas e validação.
 
-## Tarefas Dispon\xc3\xadveis
+## Tarefas Disponíveis
 
 ### Linked Lists
 
@@ -231,8 +231,21 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `detect_cycle.py` - verificar presen\xc3\xa7a de ciclos em uma lista ligada.
 - `merge_sorted_lists.py` - mesclar duas listas ligadas ordenadas.
 
-### \xc3\x81rvores Bin\xc3\xa1rias
+### Árvores Binárias
 
 - `balance_bst.py` - balancear uma BST desbalanceada.
 - `nivel_ordem.py` - percorrer a \xc3\xa1rvore em ordem de n\xc3\xadvel.
 - `is_valid_bst.py` - verificar se uma \xc3\xa1rvore \xc3\xa9 uma BST v\xc3\xa1lida.
+
+### Queues
+
+- `simple_queue.py` - fila b\xc3\xa1sica com opera\xc3\xa7\xc3\xb5es de enfileirar e desenfileirar.
+- `queue_two_stacks.py` - fila implementada com duas pilhas.
+- `circular_queue.py` - fila circular de tamanho fixo.
+
+### Stacks
+
+- `validate_parentheses.py` - verificar se uma sequência de parênteses está balanceada.
+- `min_stack.py` - pilha que retorna o valor mínimo em O(1).
+- `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
+
