@@ -19,4 +19,11 @@ def reverse_linked_list(head: Optional[ListNode]) -> Optional[ListNode]:
     Returns:
         O novo nó inicial após a reversão.
     """
-    raise NotImplementedError("Implementar esta função")
+    tail = None
+    curr = head
+
+    while curr is not None:
+        tail = ListNode(curr.value, next=tail)
+        curr = curr.next
+
+    return tail
