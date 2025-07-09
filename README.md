@@ -188,6 +188,7 @@ Para ilustrar concretamente, vejamos um exemplo de como o agente atuaria dado um
      - Testa uma árvore com vários níveis, incluindo nós faltantes, etc.
      - Testa árvore nula (None) retorna lista vazia.
    - `is_valid_bst.py` com função `is_valid_bst(root)` e stub.
+- `delete_bst_node.py` - remover um nó de uma BST.
    - `test_is_valid_bst.py` com testes:
      - Vários cenários de árvore válida e inválida (violações sutis, e.g. um nodo numa subárvore direita que é menor que a raiz ancestral).
      - Casos de um nó, nenhum nó, etc.
@@ -236,6 +237,26 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `balance_bst.py` - balancear uma BST desbalanceada.
 - `nivel_ordem.py` - percorrer a \xc3\xa1rvore em ordem de n\xc3\xadvel.
 - `is_valid_bst.py` - verificar se uma \xc3\xa1rvore \xc3\xa9 uma BST v\xc3\xa1lida.
+- `delete_bst_node.py` - remover um nó de uma BST.
+- `tree_min_max.py` - obter o menor e o maior valor de uma \xc3\xa1rvore.
+- `tree_height.py` - calcular a altura de uma \xc3\xa1rvore bin\xc3\xa1ria.
+- `count_nodes.py` - contar a quantidade de n\xc3\xb3s da \xc3\xa1rvore.
+- `search_bst.py` - buscar um valor em uma BST.
+- `is_valid_bst.py` - verificar se uma árvore é uma BST válida.
+- `lowest_common_ancestor.py` - encontrar o menor ancestral comum de dois nós.
+- `in_ordem.py` - percorrer a árvore em ordem.
+- `pre_ordem.py` - percorrer a árvore em pré-ordem.
+- `pos_ordem.py` - percorrer a árvore em pós-ordem.
+
+### Tree Rotations
+
+- `rotate_left.py` - realizar rotação à esquerda de um nó.
+- `rotate_right.py` - realizar rotação à direita de um nó.
+
+### Árvores Rubro-Negras
+
+- `insert_red_black.py` - inserir valor mantendo as propriedades Rubro-Negras.
+- `is_valid_red_black.py` - validar se a árvore segue as regras Rubro-Negras.
 
 ### Queues
 
@@ -254,3 +275,21 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `dfs_recursivo.py` - busca em profundidade implementada de forma recursiva.
 - `dfs_iterativo.py` - busca em profundidade utilizando pilha.
 - `detect_cycle_dfs.py` - detecção de ciclos em grafo usando DFS.
+
+### Grafos
+
+- `bfs_graph.py` - busca em largura a partir de um v\u00e9rtice inicial.
+- `grafo_adj_list.py` - grafo usando lista de adjacência.
+- `busca_largura.py` - percurso em largura (BFS) em grafos.
+- `busca_profundidade.py` - percurso em profundidade (DFS) em grafos.
+
+### Radix Trees
+
+- `radix_insert.py` - inserir palavra em uma Radix Tree.
+- `radix_search.py` - buscar palavra em uma Radix Tree.
+- `radix_delete.py` - remover palavra de uma Radix Tree.
+
+### General Tree Conversion
+
+- `convert_to_binary.py` - converter uma árvore geral para binária.
+- `binary_to_general.py` - converter uma árvore binária na representação filho à esquerda/irmão à direita para uma árvore geral.
