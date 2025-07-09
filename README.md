@@ -265,8 +265,13 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `min_stack.py` - pilha que retorna o valor mínimo em O(1).
 - `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
 
+### Radix Trees
+
+- `radix_insert.py` - inserir palavra em uma Radix Tree.
+- `radix_search.py` - buscar palavra em uma Radix Tree.
+- `radix_delete.py` - remover palavra de uma Radix Tree.
+
 ### General Tree Conversion
 
 - `convert_to_binary.py` - converter uma árvore geral para binária.
 - `binary_to_general.py` - converter uma árvore binária na representação filho à esquerda/irmão à direita para uma árvore geral.
-
