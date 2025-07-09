@@ -325,3 +325,9 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `merge_k_sorted_lists.py` - mesclar múltiplas listas ordenadas.
 - `kth_smallest.py` - encontrar o k-ésimo menor elemento.
 
+
+### Heaps
+
+- `binary_heap.py` - implementa uma min-heap simples.
+- `heap_sort.py` - ordena uma lista usando heap sort.
+- `k_largest_elements.py` - retorna os k maiores elementos de uma lista.
