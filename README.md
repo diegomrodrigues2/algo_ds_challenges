@@ -230,3 +230,9 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `reverse_linked_list.py` - reverter uma lista ligada simples.
 - `detect_cycle.py` - verificar presen\xc3\xa7a de ciclos em uma lista ligada.
 - `merge_sorted_lists.py` - mesclar duas listas ligadas ordenadas.
+
+### Queues
+
+- `simple_queue.py` - fila b\xc3\xa1sica com opera\xc3\xa7\xc3\xb5es de enfileirar e desenfileirar.
+- `queue_two_stacks.py` - fila implementada com duas pilhas.
+- `circular_queue.py` - fila circular de tamanho fixo.
