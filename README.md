@@ -248,4 +248,5 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `validate_parentheses.py` - verificar se uma sequência de parênteses está balanceada.
 - `min_stack.py` - pilha que retorna o valor mínimo em O(1).
 - `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
+- `pair_stack.py` - pilha que armazena pares de inteiros.
 
