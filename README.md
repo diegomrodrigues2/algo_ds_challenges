@@ -249,3 +249,8 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `min_stack.py` - pilha que retorna o valor mínimo em O(1).
 - `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
 
+### Busca em Profundidade
+
+- `dfs_recursivo.py` - busca em profundidade implementada de forma recursiva.
+- `dfs_iterativo.py` - busca em profundidade utilizando pilha.
+- `detect_cycle_dfs.py` - detecção de ciclos em grafo usando DFS.
