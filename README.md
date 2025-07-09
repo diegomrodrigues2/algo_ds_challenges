@@ -318,3 +318,10 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `cumulative_sum.py` - gerar lista de somas acumuladas.
 - `range_sum_query.py` - calcular somas de intervalos usando prefix sums.
 - `prefix_set_intersection.py` - calcular intersec\u00e7\u00e3o de conjuntos prefixados.
+
+### Priority Queues
+
+- `min_priority_queue.py` - fila de prioridade mínima usando heap.
+- `merge_k_sorted_lists.py` - mesclar múltiplas listas ordenadas.
+- `kth_smallest.py` - encontrar o k-ésimo menor elemento.
+
