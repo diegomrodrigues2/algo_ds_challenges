@@ -236,6 +236,9 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `balance_bst.py` - balancear uma BST desbalanceada.
 - `nivel_ordem.py` - percorrer a \xc3\xa1rvore em ordem de n\xc3\xadvel.
 - `is_valid_bst.py` - verificar se uma \xc3\xa1rvore \xc3\xa9 uma BST v\xc3\xa1lida.
+- `tree_min_max.py` - obter o menor e o maior valor de uma \xc3\xa1rvore.
+- `tree_height.py` - calcular a altura de uma \xc3\xa1rvore bin\xc3\xa1ria.
+- `count_nodes.py` - contar a quantidade de n\xc3\xb3s da \xc3\xa1rvore.
 - `search_bst.py` - buscar um valor em uma BST.
 - `is_valid_bst.py` - verificar se uma árvore é uma BST válida.
 - `lowest_common_ancestor.py` - encontrar o menor ancestral comum de dois nós.
