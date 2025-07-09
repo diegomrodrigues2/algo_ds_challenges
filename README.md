@@ -222,3 +222,11 @@ Com essa configuração, o repositório de estudos de algoritmos atenderá às n
 - **Extensibilidade:** Embora inicialmente focado em Python, a estrutura poderia inspirar práticas similares em outras linguagens. Também, se desejado, pode-se incluir um *driver* (código main) para ler entrada e produzir saída de cada algoritmo, facilitando experimentação manual além dos testes – mas isso é opcional e secundário, dado que os testes já fornecem os exemplos de uso.
 
 Em conclusão, as instruções acima servem para configurar o agente de forma clara e objetiva. Ao segui-las, o agente Codex deve conseguir transformar um conceito teórico em um conjunto concreto de desafios de programação no repositório, com tudo o que é necessário para praticar (menos a parte de escrever a solução, que fica como exercício do usuário). Esse equilíbrio permite **estudo ativo** e focado: o usuário gasta tempo pensando e codando soluções, enquanto o agente cuida da geração dos problemas e validação.
+
+## Tarefas Dispon\xc3\xadveis
+
+### Linked Lists
+
+- `reverse_linked_list.py` - reverter uma lista ligada simples.
+- `detect_cycle.py` - verificar presen\xc3\xa7a de ciclos em uma lista ligada.
+- `merge_sorted_lists.py` - mesclar duas listas ligadas ordenadas.
