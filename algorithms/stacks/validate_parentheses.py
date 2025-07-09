@@ -2,12 +2,12 @@ from __future__ import annotations
 
 
 def is_valid_parentheses(expression: str) -> bool:
-    """Verifica se todos os par\u00eanteses est\u00e3o balanceados.
+    """Verifica se todos os parênteses estão balanceados.
 
     Args:
-        expression: sequ\u00eancia contendo par\u00eanteses e outros caracteres.
+        expression: sequência contendo parênteses e outros caracteres.
 
     Returns:
-        ``True`` se a sequ\u00eancia \u00e9 bem-formada; caso contr\u00e1rio ``False``.
+        ``True`` se a sequência é bem-formada; caso contrário ``False``.
     """
-    raise NotImplementedError("Implementar esta fun\u00e7\u00e3o")
+    raise NotImplementedError("Implementar esta função")

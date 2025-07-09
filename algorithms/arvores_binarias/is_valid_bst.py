@@ -3,7 +3,7 @@ from typing import Optional
 
 
 class TreeNode:
-    """N\u00f3 de uma \u00e1rvore bin\u00e1ria."""
+    """Nó de uma árvore binária."""
 
     def __init__(self, value: int, left: Optional['TreeNode'] | None = None, right: Optional['TreeNode'] | None = None) -> None:
         self.value = value
@@ -12,12 +12,12 @@ class TreeNode:
 
 
 def is_valid_bst(root: Optional[TreeNode]) -> bool:
-    """Verifica se a \u00e1rvore \u00e9 uma BST v\u00e1lida.
+    """Verifica se a árvore é uma BST válida.
 
     Args:
-        root: raiz da \u00e1rvore.
+        root: raiz da árvore.
 
     Returns:
-        ``True`` se a \u00e1rvore obedecer as propriedades de uma BST, caso contr\u00e1rio ``False``.
+        ``True`` se a árvore obedecer as propriedades de uma BST, caso contrário ``False``.
     """
-    raise NotImplementedError("Implementar esta fun\u00e7\u00e3o")
+    raise NotImplementedError("Implementar esta função")

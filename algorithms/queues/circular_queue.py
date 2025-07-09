@@ -12,11 +12,11 @@ class CircularQueue:
         self.count = 0
 
     def enqueue(self, item: int) -> None:
-        """Insere item se a fila n\u00e3o estiver cheia."""
+        """Insere item se a fila não estiver cheia."""
         raise NotImplementedError("Implementar esta função")
 
     def dequeue(self) -> int:
-        """Remove e retorna o item da frente se n\u00e3o estiver vazia."""
+        """Remove e retorna o item da frente se não estiver vazia."""
         raise NotImplementedError("Implementar esta função")
 
     def is_empty(self) -> bool:
