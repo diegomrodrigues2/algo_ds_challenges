@@ -230,3 +230,9 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `reverse_linked_list.py` - reverter uma lista ligada simples.
 - `detect_cycle.py` - verificar presen\xc3\xa7a de ciclos em uma lista ligada.
 - `merge_sorted_lists.py` - mesclar duas listas ligadas ordenadas.
+
+### \xc3\x81rvores Bin\xc3\xa1rias
+
+- `balance_bst.py` - balancear uma BST desbalanceada.
+- `nivel_ordem.py` - percorrer a \xc3\xa1rvore em ordem de n\xc3\xadvel.
+- `is_valid_bst.py` - verificar se uma \xc3\xa1rvore \xc3\xa9 uma BST v\xc3\xa1lida.
