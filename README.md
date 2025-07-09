@@ -249,3 +249,9 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `min_stack.py` - pilha que retorna o valor mínimo em O(1).
 - `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
 
+
+### Radix Trees
+
+- `radix_insert.py` - inserir palavra em uma Radix Tree.
+- `radix_search.py` - buscar palavra em uma Radix Tree.
+- `radix_delete.py` - remover palavra de uma Radix Tree.
