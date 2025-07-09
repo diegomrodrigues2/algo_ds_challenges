@@ -258,6 +258,11 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `insert_red_black.py` - inserir valor mantendo as propriedades Rubro-Negras.
 - `is_valid_red_black.py` - validar se a árvore segue as regras Rubro-Negras.
 
+### AVL Trees
+
+- `insert_avl.py` - inserir valores mantendo o balanceamento AVL.
+- `is_avl_tree.py` - verificar se uma \xc3\xa1rvore atende \xc3\xa0s propriedades AVL.
+
 ### Queues
 
 - `simple_queue.py` - fila b\xc3\xa1sica com opera\xc3\xa7\xc3\xb5es de enfileirar e desenfileirar.
