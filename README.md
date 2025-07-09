@@ -270,6 +270,13 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `min_stack.py` - pilha que retorna o valor mínimo em O(1).
 - `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
 
+
+### Grafos
+
+- `grafo_adj_list.py` - grafo usando lista de adjacência.
+- `busca_largura.py` - percurso em largura (BFS) em grafos.
+- `busca_profundidade.py` - percurso em profundidade (DFS) em grafos.
+
 ### Radix Trees
 
 - `radix_insert.py` - inserir palavra em uma Radix Tree.
