@@ -188,6 +188,7 @@ Para ilustrar concretamente, vejamos um exemplo de como o agente atuaria dado um
      - Testa uma árvore com vários níveis, incluindo nós faltantes, etc.
      - Testa árvore nula (None) retorna lista vazia.
    - `is_valid_bst.py` com função `is_valid_bst(root)` e stub.
+- `delete_bst_node.py` - remover um nó de uma BST.
    - `test_is_valid_bst.py` com testes:
      - Vários cenários de árvore válida e inválida (violações sutis, e.g. um nodo numa subárvore direita que é menor que a raiz ancestral).
      - Casos de um nó, nenhum nó, etc.
@@ -236,6 +237,7 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `balance_bst.py` - balancear uma BST desbalanceada.
 - `nivel_ordem.py` - percorrer a \xc3\xa1rvore em ordem de n\xc3\xadvel.
 - `is_valid_bst.py` - verificar se uma \xc3\xa1rvore \xc3\xa9 uma BST v\xc3\xa1lida.
+- `delete_bst_node.py` - remover um nó de uma BST.
 - `tree_min_max.py` - obter o menor e o maior valor de uma \xc3\xa1rvore.
 - `tree_height.py` - calcular a altura de uma \xc3\xa1rvore bin\xc3\xa1ria.
 - `count_nodes.py` - contar a quantidade de n\xc3\xb3s da \xc3\xa1rvore.
