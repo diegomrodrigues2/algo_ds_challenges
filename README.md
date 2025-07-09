@@ -249,3 +249,7 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `min_stack.py` - pilha que retorna o valor mínimo em O(1).
 - `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
 
+
+### Prefix Sums
+
+- `prefix_set_intersection.py` - calcular intersec\u00e7\u00e3o de conjuntos prefixados.
