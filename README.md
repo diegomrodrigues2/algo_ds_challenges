@@ -248,6 +248,11 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `pre_ordem.py` - percorrer a árvore em pré-ordem.
 - `pos_ordem.py` - percorrer a árvore em pós-ordem.
 
+### Tree Rotations
+
+- `rotate_left.py` - realizar rotação à esquerda de um nó.
+- `rotate_right.py` - realizar rotação à direita de um nó.
+
 ### Queues
 
 - `simple_queue.py` - fila b\xc3\xa1sica com opera\xc3\xa7\xc3\xb5es de enfileirar e desenfileirar.
