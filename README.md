@@ -273,6 +273,10 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `min_stack.py` - pilha que retorna o valor mínimo em O(1).
 - `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
 
+### Huffman
+
+- `huffman_decoding.py` - decodificar mensagem a partir de códigos de Huffman.
+
 ### Graphs
 
 - `topological_sort_dfs.py` - ordenação topológica usando busca em profundidade.
