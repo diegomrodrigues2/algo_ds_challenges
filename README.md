@@ -236,6 +236,9 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `balance_bst.py` - balancear uma BST desbalanceada.
 - `nivel_ordem.py` - percorrer a \xc3\xa1rvore em ordem de n\xc3\xadvel.
 - `is_valid_bst.py` - verificar se uma \xc3\xa1rvore \xc3\xa9 uma BST v\xc3\xa1lida.
+- `in_ordem.py` - percorrer a árvore em ordem.
+- `pre_ordem.py` - percorrer a árvore em pré-ordem.
+- `pos_ordem.py` - percorrer a árvore em pós-ordem.
 
 ### Queues
 
