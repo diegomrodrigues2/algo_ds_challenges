@@ -249,3 +249,8 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `min_stack.py` - pilha que retorna o valor mínimo em O(1).
 - `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
 
+### General Tree Conversion
+
+- `convert_to_binary.py` - converter uma árvore geral para binária.
+- `binary_to_general.py` - converter uma árvore binária na representação filho à esquerda/irmão à direita para uma árvore geral.
+
