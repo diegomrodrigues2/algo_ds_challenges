@@ -230,3 +230,9 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `reverse_linked_list.py` - reverter uma lista ligada simples.
 - `detect_cycle.py` - verificar presen\xc3\xa7a de ciclos em uma lista ligada.
 - `merge_sorted_lists.py` - mesclar duas listas ligadas ordenadas.
+
+### Stacks
+
+- `validate_parentheses.py` - verificar se uma sequência de parênteses está balanceada.
+- `min_stack.py` - pilha que retorna o valor mínimo em O(1).
+- `evaluate_postfix.py` - avaliar expressões em notação pós-fixa.
