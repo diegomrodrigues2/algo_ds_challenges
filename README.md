@@ -273,6 +273,7 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 
 ### Grafos
 
+- `bfs_graph.py` - busca em largura a partir de um v\u00e9rtice inicial.
 - `grafo_adj_list.py` - grafo usando lista de adjacência.
 - `busca_largura.py` - percurso em largura (BFS) em grafos.
 - `busca_profundidade.py` - percurso em profundidade (DFS) em grafos.
