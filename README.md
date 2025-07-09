@@ -243,6 +243,9 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `queue_two_stacks.py` - fila implementada com duas pilhas.
 - `circular_queue.py` - fila circular de tamanho fixo.
 
+### Graphs
+
+- `bfs_shortest_path.py` - encontrar o caminho mais curto em um grafo nao ponderado usando BFS.
 ### Stacks
 
 - `validate_parentheses.py` - verificar se uma sequência de parênteses está balanceada.
