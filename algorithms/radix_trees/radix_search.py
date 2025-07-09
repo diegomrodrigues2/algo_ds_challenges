@@ -3,7 +3,7 @@ from typing import Optional, Dict
 
 
 class RadixNode:
-    """N\u00f3 de uma Radix Tree."""
+    """Nó de uma Radix Tree."""
 
     def __init__(self) -> None:
         self.children: Dict[str, RadixNode] = {}
@@ -14,10 +14,10 @@ def radix_search(root: Optional[RadixNode], word: str) -> bool:
     """Procura uma palavra na Radix Tree.
 
     Args:
-        root: n\u00f3 inicial da \u00e1rvore.
+        root: nó inicial da árvore.
         word: palavra a ser buscada.
 
     Returns:
-        ``True`` se a palavra existir na \u00e1rvore, caso contr\u00e1rio ``False``.
+        ``True`` se a palavra existir na árvore, caso contrário ``False``.
     """
-    raise NotImplementedError("Implementar esta fun\u00e7\u00e3o")
+    raise NotImplementedError("Implementar esta função")

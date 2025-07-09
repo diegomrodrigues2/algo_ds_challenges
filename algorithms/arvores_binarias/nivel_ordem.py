@@ -3,7 +3,7 @@ from typing import Optional, List
 
 
 class TreeNode:
-    """N\u00f3 de uma \u00e1rvore bin\u00e1ria."""
+    """Nó de uma árvore binária."""
 
     def __init__(self, value: int, left: Optional['TreeNode'] | None = None, right: Optional['TreeNode'] | None = None) -> None:
         self.value = value
@@ -12,12 +12,12 @@ class TreeNode:
 
 
 def nivel_ordem(root: Optional[TreeNode]) -> List[int]:
-    """Percorre a \u00e1rvore em ordem de n\u00edvel (BFS).
+    """Percorre a árvore em ordem de nível (BFS).
 
     Args:
-        root: raiz da \u00e1rvore bin\u00e1ria.
+        root: raiz da árvore binária.
 
     Returns:
-        Lista com os valores dos n\u00f3s em ordem de n\u00edvel.
+        Lista com os valores dos nós em ordem de nível.
     """
-    raise NotImplementedError("Implementar esta fun\u00e7\u00e3o")
+    raise NotImplementedError("Implementar esta função")

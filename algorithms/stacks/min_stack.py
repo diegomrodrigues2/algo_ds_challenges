@@ -10,16 +10,16 @@ class MinStack:
 
     def push(self, value: int) -> None:
         """Insere um valor no topo da pilha."""
-        raise NotImplementedError("Implementar esta fun\u00e7\u00e3o")
+        raise NotImplementedError("Implementar esta função")
 
     def pop(self) -> int:
         """Remove e retorna o topo da pilha."""
-        raise NotImplementedError("Implementar esta fun\u00e7\u00e3o")
+        raise NotImplementedError("Implementar esta função")
 
     def top(self) -> int:
-        """Retorna o valor do topo sem remov\u00ea-lo."""
-        raise NotImplementedError("Implementar esta fun\u00e7\u00e3o")
+        """Retorna o valor do topo sem removê-lo."""
+        raise NotImplementedError("Implementar esta função")
 
     def get_min(self) -> int:
         """Retorna o menor valor presente na pilha."""
-        raise NotImplementedError("Implementar esta fun\u00e7\u00e3o")
+        raise NotImplementedError("Implementar esta função")

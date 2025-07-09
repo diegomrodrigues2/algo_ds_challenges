@@ -139,6 +139,7 @@ Para manter o repositório organizado e profissional, seguem algumas convençõe
 - **Nomes de Funções e Classes:** Usar `snake_case` para funções e métodos, e `CamelCase` para classes, conforme convenção Python[peps.python.org](https://peps.python.org/pep-0008/#:~:text=Modules should have short%2C all,use of underscores is discouraged)[peps.python.org](https://peps.python.org/pep-0008/#:~:text=Class names should normally use,the CapWords convention). Por exemplo, `def insere_elemento(lista, valor):` para função, ou `class NodeArvore:` para classe (apesar de em muitos casos usaremos classes auxiliares simples como `TreeNode` em CamelCase, o que é aceitável por ser uma estrutura de dados). Variáveis e parâmetros também em letras minúsculas com underscores se composto.
 - **Documentação e Comentários:** Incluir docstrings nas funções principais descrevendo o que fazem, seus parâmetros e retorno. Comentários podem ser utilizados para esclarecer partes complexas dos testes ou dos stubs. Manter os comentários em português ou inglês de maneira consistente, conforme decidido (por exemplo, podemos escrever enunciados de problema em português nos comentários para facilitar o entendimento, já que é um repositório pessoal de estudos).
 - **Formatação:** Garantir que o código gerado pelo agente siga formatação PEP8 quando possível – por exemplo, indentação de 4 espaços, linhas não muito longas, etc. Isso não apenas mantém o código elegante, mas também evita distrações com estilo durante a resolução dos problemas.
+- **Codificação UTF-8:** Sempre salve e edite os arquivos utilizando a codificação UTF-8 para evitar caracteres corrompidos.
 
 Ao aderir a essas convenções, o repositório permanecerá limpo e fácil de escanear. Um desenvolvedor (ou o próprio usuário futuro) deve conseguir ver a lista de arquivos e entender que desafios estão ali e o que é esperado em cada um.
 
@@ -229,18 +230,18 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 ### Linked Lists
 
 - `reverse_linked_list.py` - reverter uma lista ligada simples.
-- `detect_cycle.py` - verificar presen\xc3\xa7a de ciclos em uma lista ligada.
+- `detect_cycle.py` - verificar presença de ciclos em uma lista ligada.
 - `merge_sorted_lists.py` - mesclar duas listas ligadas ordenadas.
 
 ### Árvores Binárias
 
 - `balance_bst.py` - balancear uma BST desbalanceada.
-- `nivel_ordem.py` - percorrer a \xc3\xa1rvore em ordem de n\xc3\xadvel.
-- `is_valid_bst.py` - verificar se uma \xc3\xa1rvore \xc3\xa9 uma BST v\xc3\xa1lida.
+- `nivel_ordem.py` - percorrer a árvore em ordem de nível.
+- `is_valid_bst.py` - verificar se uma árvore é uma BST válida.
 - `delete_bst_node.py` - remover um nó de uma BST.
-- `tree_min_max.py` - obter o menor e o maior valor de uma \xc3\xa1rvore.
-- `tree_height.py` - calcular a altura de uma \xc3\xa1rvore bin\xc3\xa1ria.
-- `count_nodes.py` - contar a quantidade de n\xc3\xb3s da \xc3\xa1rvore.
+- `tree_min_max.py` - obter o menor e o maior valor de uma árvore.
+- `tree_height.py` - calcular a altura de uma árvore binária.
+- `count_nodes.py` - contar a quantidade de nós da árvore.
 - `search_bst.py` - buscar um valor em uma BST.
 - `is_valid_bst.py` - verificar se uma árvore é uma BST válida.
 - `lowest_common_ancestor.py` - encontrar o menor ancestral comum de dois nós.
@@ -261,11 +262,11 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 ### AVL Trees
 
 - `insert_avl.py` - inserir valores mantendo o balanceamento AVL.
-- `is_avl_tree.py` - verificar se uma \xc3\xa1rvore atende \xc3\xa0s propriedades AVL.
+- `is_avl_tree.py` - verificar se uma árvore atende às propriedades AVL.
 
 ### Queues
 
-- `simple_queue.py` - fila b\xc3\xa1sica com opera\xc3\xa7\xc3\xb5es de enfileirar e desenfileirar.
+- `simple_queue.py` - fila básica com operações de enfileirar e desenfileirar.
 - `queue_two_stacks.py` - fila implementada com duas pilhas.
 - `circular_queue.py` - fila circular de tamanho fixo.
 
@@ -297,7 +298,7 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 
 ### Grafos
 
-- `bfs_graph.py` - busca em largura a partir de um v\u00e9rtice inicial.
+- `bfs_graph.py` - busca em largura a partir de um vértice inicial.
 - `grafo_adj_list.py` - grafo usando lista de adjacência.
 - `busca_largura.py` - percurso em largura (BFS) em grafos.
 - `busca_profundidade.py` - percurso em profundidade (DFS) em grafos.
@@ -317,7 +318,7 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 
 - `cumulative_sum.py` - gerar lista de somas acumuladas.
 - `range_sum_query.py` - calcular somas de intervalos usando prefix sums.
-- `prefix_set_intersection.py` - calcular intersec\u00e7\u00e3o de conjuntos prefixados.
+- `prefix_set_intersection.py` - calcular intersecção de conjuntos prefixados.
 
 ### Priority Queues
 

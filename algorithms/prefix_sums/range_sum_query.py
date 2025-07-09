@@ -5,14 +5,14 @@ def range_sum(nums: list[int], queries: list[tuple[int, int]]) -> list[int]:
     """Calcula a soma dos elementos em intervalos especificados.
 
     Cada par ``(inicio, fim)`` em ``queries`` representa um intervalo inclusivo
-    sobre ``nums``. A fun\u00e7\u00e3o deve retornar a soma de cada intervalo na mesma
+    sobre ``nums``. A função deve retornar a soma de cada intervalo na mesma
     ordem fornecida.
 
     Args:
         nums: lista de inteiros.
-        queries: lista de tuplas ``(inicio, fim)`` onde ``0 \u2264 inicio \u2264 fim < len(nums)``.
+        queries: lista de tuplas ``(inicio, fim)`` onde ``0 ≤ inicio ≤ fim < len(nums)``.
 
     Returns:
         Lista de inteiros com as somas de cada intervalo.
     """
-    raise NotImplementedError("Implementar esta fun\u00e7\u00e3o")
+    raise NotImplementedError("Implementar esta função")

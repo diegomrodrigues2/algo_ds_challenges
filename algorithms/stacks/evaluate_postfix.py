@@ -2,15 +2,15 @@ from __future__ import annotations
 
 
 def evaluate_postfix(expression: str) -> int:
-    """Avalia uma express\u00e3o em nota\u00e7\u00e3o p\u00f3s-fixa.
+    """Avalia uma expressão em notação pós-fixa.
 
-    A express\u00e3o deve conter operandos e operadores separados por espa\u00e7os.
-    Suporta ``+``, ``-``, ``*`` e ``/`` (divis\u00e3o inteira).
+    A expressão deve conter operandos e operadores separados por espaços.
+    Suporta ``+``, ``-``, ``*`` e ``/`` (divisão inteira).
 
     Args:
-        expression: string da express\u00e3o p\u00f3s-fixa.
+        expression: string da expressão pós-fixa.
 
     Returns:
-        Resultado inteiro da avalia\u00e7\u00e3o.
+        Resultado inteiro da avaliação.
     """
-    raise NotImplementedError("Implementar esta fun\u00e7\u00e3o")
+    raise NotImplementedError("Implementar esta função")
