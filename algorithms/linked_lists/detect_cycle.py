@@ -19,4 +19,31 @@ def detect_cycle(head: Optional[ListNode]) -> bool:
     Returns:
         ``True`` se houver ciclo; caso contrário ``False``.
     """
-    raise NotImplementedError("Implementar esta função")
+    # [1,2,3,4,1]
+    if head is None:
+        return False
+
+    slow = head
+    fast = head
+
+    while fast is not None and fast.next is not None:
+        slow = slow.next
+        fast = fast.next.next
+
+        if slow == fast:
+            return True
+    
+    return False
+
+"""
+Algoritmo de Floyd (Dois Ponteiros)
+
+A abordagem clássica para detectar ciclos em linked lists é usar dois ponteiros com velocidades diferentes:
+
+Ponteiro lento (slow): move 1 posição por vez
+Ponteiro rápido (fast): move 2 posições por vez
+
+Lógica:
+* Se não há ciclo: o ponteiro rápido chegará ao final (None) primeiro
+* Se há ciclo: o ponteiro rápido eventualmente "alcançará" o ponteiro lento dentro do ciclo
+"""
