@@ -20,4 +20,12 @@ def pre_ordem(root: Optional[TreeNode]) -> List[int]:
     Returns:
         Lista com os valores visitados no percurso pre-order.
     """
-    raise NotImplementedError("Implementar esta função")
+    if root is None:
+        return []
+
+    return (
+        [root.value] +
+        pre_ordem(root.left) +
+        pre_ordem(root.right)
+    )
+

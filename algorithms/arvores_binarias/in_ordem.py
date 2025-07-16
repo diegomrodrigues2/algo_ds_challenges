@@ -20,4 +20,11 @@ def in_ordem(root: Optional[TreeNode]) -> List[int]:
     Returns:
         Lista com os valores visitados no percurso in-order.
     """
-    raise NotImplementedError("Implementar esta função")
+    if root is None:
+        return []
+
+    return (
+        in_ordem(root.left) +
+        [root.value] +
+        in_ordem(root.right)
+    )

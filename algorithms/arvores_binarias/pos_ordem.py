@@ -20,4 +20,12 @@ def pos_ordem(root: Optional[TreeNode]) -> List[int]:
     Returns:
         Lista com os valores visitados no percurso post-order.
     """
-    raise NotImplementedError("Implementar esta função")
+    if root is None:
+        return []
+
+    return (
+        pos_ordem(root.left) +
+        pos_ordem(root.right) +
+        [root.value] 
+    )
+

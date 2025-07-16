@@ -24,4 +24,27 @@ def balance_bst(root: Optional[TreeNode]) -> Optional[TreeNode]:
     Returns:
         Raiz da nova BST balanceada ou ``None`` se a árvore for vazia.
     """
-    raise NotImplementedError("Implementar esta função")
+    if root is None:
+        return None
+
+    # Obter lista ordenada dos valores
+    from .in_ordem import in_ordem
+    values = in_ordem(root)
+    
+    # Função auxiliar para construir árvore balanceada
+    def build_balanced_tree(arr, start, end):
+        if start > end:
+            return None
+            
+        # Usar o elemento do meio como raiz
+        mid = (start + end) // 2
+        node = TreeNode(arr[mid])
+        
+        # Construir recursivamente as subárvores
+        node.left = build_balanced_tree(arr, start, mid - 1)
+        node.right = build_balanced_tree(arr, mid + 1, end)
+        
+        return node
+    
+    # Construir árvore balanceada a partir dos valores ordenados
+    return build_balanced_tree(values, 0, len(values) - 1)

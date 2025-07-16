@@ -20,4 +20,14 @@ def count_nodes(root: Optional[TreeNode]) -> int:
     Returns:
         Quantidade de nós na árvore.
     """
-    raise NotImplementedError("Implementar esta função")
+    def _count_nodes(node, count):
+        if node is None:
+            return 0
+        return (
+            _count_nodes(node.left, count) +
+            count +
+            _count_nodes(node.right, count)
+        )
+
+    return _count_nodes(root, count=1)
+
