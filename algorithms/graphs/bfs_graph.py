@@ -13,4 +13,4 @@ def bfs_graph(graph: Dict[int, List[int]], start: int) -> List[int]:
     Returns:
         Lista de vértices na ordem em que foram visitados.
     """
-    raise NotImplementedError("Implementar esta função")
+    raise NotImplementedError("Implementar esta função") 

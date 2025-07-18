@@ -12,4 +12,4 @@ def busca_largura(adj: Dict[int, List[int]], inicio: int) -> List[int]:
     Returns:
         Lista de vértices na ordem em que foram visitados.
     """
-    raise NotImplementedError("Implementar esta função")
+    raise NotImplementedError("Implementar esta função") 

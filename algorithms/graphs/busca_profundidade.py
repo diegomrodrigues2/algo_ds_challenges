@@ -12,4 +12,4 @@ def busca_profundidade(adj: Dict[int, List[int]], inicio: int) -> List[int]:
     Returns:
         Lista de vértices visitados na ordem da DFS.
     """
-    raise NotImplementedError("Implementar esta função")
+    raise NotImplementedError("Implementar esta função") 

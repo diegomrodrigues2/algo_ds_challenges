@@ -332,3 +332,15 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `binary_heap.py` - implementa uma min-heap simples.
 - `heap_sort.py` - ordena uma lista usando heap sort.
 - `k_largest_elements.py` - retorna os k maiores elementos de uma lista.
+
+### Dynamic Programming
+
+- `rod_cutting.py` - problema do corte de barras para maximizar lucro.
+- `knapsack.py` - problema da mochila (0/1, fracionária e com itens).
+- `longest_common_subsequence.py` - subsequência comum mais longa entre strings.
+- `optimal_binary_search_tree.py` - árvore binária de busca ótima.
+
+### Parallel Algorithms
+
+- `fibonacci_parallel.py` - cálculo de Fibonacci usando modelo fork-join.
+- `matrix_vector_multiply.py` - multiplicação matriz-vetor paralela.

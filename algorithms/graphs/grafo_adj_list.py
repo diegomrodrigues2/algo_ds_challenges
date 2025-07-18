@@ -15,4 +15,4 @@ class Grafo:
 
     def vizinhos(self, u: int) -> List[int]:
         """Retorna a lista de vértices adjacentes a ``u``."""
-        raise NotImplementedError("Implementar esta função")
+        raise NotImplementedError("Implementar esta função") 
