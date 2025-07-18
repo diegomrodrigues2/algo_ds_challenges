@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import Optional, List
-
+from collections import deque
 
 class TreeNode:
     """Nó de uma árvore binária."""
@@ -20,4 +20,21 @@ def nivel_ordem(root: Optional[TreeNode]) -> List[int]:
     Returns:
         Lista com os valores dos nós em ordem de nível.
     """
-    raise NotImplementedError("Implementar esta função")
+    if root is None:
+        return []
+    
+    result = []
+    queue = deque([root])
+
+    while queue:
+        node = queue.popleft()
+        result.append(node.value)
+
+        if node.left:
+            queue.append(node.left)
+        
+        if node.right:
+            queue.append(node.right)
+            
+    return result
+

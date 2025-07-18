@@ -22,4 +22,21 @@ def lowest_common_ancestor(root: Optional[TreeNode], p: TreeNode, q: TreeNode) -
     Returns:
         O nó que representa o menor ancestral comum de ``p`` e ``q`` ou ``None`` se algum dos nós não estiver presente.
     """
-    raise NotImplementedError("Implementar esta função")
+    if root is None:
+        return None
+
+    if p.value == root.value or q.value == root.value:
+        return root
+    
+    left_lca = lowest_common_ancestor(root.left, p, q)
+    right_lca = lowest_common_ancestor(root.right, p, q)
+
+    if left_lca and right_lca:
+        return root
+    
+    if left_lca is None:
+        return right_lca
+    else:
+        return left_lca
+
+
