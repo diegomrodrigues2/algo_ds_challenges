@@ -333,6 +333,16 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 - `heap_sort.py` - ordena uma lista usando heap sort.
 - `k_largest_elements.py` - retorna os k maiores elementos de uma lista.
 
+### Sorting Algorithms
+
+- `merge_sort.py` - ordenar uma lista usando merge sort.
+- `selection_sort.py` - ordenar uma lista usando selection sort.
+- `set_operations.py` - operações de conjunto (união, interseção, diferença).
+- `direct_access_array_sort.py` - ordenação usando array de acesso direto O(n + u).
+- `counting_sort.py` - ordenação por contagem estável O(n + u).
+- `radix_sort.py` - ordenação por dígitos O(n × d) com counting sort auxiliar.
+- `tuple_sort.py` - ordenação por múltiplas chaves com priorização O(k × (n + u)).
+
 ### Dynamic Programming
 
 - `rod_cutting.py` - problema do corte de barras para maximizar lucro.
