@@ -354,3 +354,13 @@ Em conclusão, as instruções acima servem para configurar o agente de forma cl
 
 - `fibonacci_parallel.py` - cálculo de Fibonacci usando modelo fork-join.
 - `matrix_vector_multiply.py` - multiplicação matriz-vetor paralela.
+- `task_parallelism.py` - padrões de paralelismo de tarefas (pipeline, produtor-consumidor, map-reduce).
+- `async_synchronization.py` - primitivas de sincronização assíncrona (contador, pool, barreira, lock r/w).
+
+### Concurrent Objects
+
+- `quiescent_counter.py` - contador quiescentemente consistente.
+- `sequential_register.py` - register sequencialmente consistente.
+- `linearizable_queue.py` - fila linearizável FIFO.
+- `wait_free_counter.py` - contador wait-free.
+- `lock_free_stack.py` - pilha lock-free LIFO.

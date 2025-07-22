@@ -55,3 +55,26 @@
 - **u**: Tamanho do universo de chaves (0 ≤ key < u)
 - **log_n(u)**: Número de dígitos em base n para representar u
 - **n!**: Número de permutações possíveis (fatorial)
+
+## 🔄 Objetos Concorrentes
+- **H**: História (sequência de eventos)
+- **H|A**: Subhistória da thread A
+- **H|x**: Subhistória do objeto x
+- **→H**: Relação de precedência em H
+- **inv(m)**: Invocação do método m
+- **res(m)**: Resposta do método m
+- **pending**: Invocação sem resposta
+- **quiescent**: Objeto sem chamadas pendentes
+- **linearization point**: Momento de efeito instantâneo
+
+## 🔗 Registradores e Memória Compartilhada
+- **SRSW**: Single-Reader, Single-Writer
+- **MRSW**: Multi-Reader, Single-Writer
+- **MRMW**: Multi-Reader, Multi-Writer
+- **W^i**: i-ésima operação de escrita
+- **R^i**: Leitura que retorna valor de W^i
+- **ν^i**: Valor único escrito por W^i
+- **StampedValue**: Par (timestamp, valor)
+- **StampedSnapshot**: Tripla (timestamp, valor, snapshot)
+- **Double collect**: Duas coletas consecutivas
+- **Clean double collect**: Coletas com mesmos timestamps

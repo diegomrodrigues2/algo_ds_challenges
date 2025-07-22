@@ -17,7 +17,6 @@ Criar resumos didáticos e visuais de algoritmos e estrutura de dados que sejam 
 - **Definições em 1-2 frases** mantendo detalhes essenciais
 - **Tabelas compactas** para comparações rápidas
 - **Diagramas simples**
-- **Evite** diagramas do tipo grafo e sequências longas
 
 ### 2. Diretrizes de Escrita Concisa
 - ✅ **Máximo 3 parágrafos** por seção
@@ -33,6 +32,17 @@ Criar resumos didáticos e visuais de algoritmos e estrutura de dados que sejam 
 |---------|-------------|----------------|
 | Performance | 🚀 Rápido | 💾 Usa memória |
 | Consistência | 🛡️ Garantida | ⏰ Mais lento |
+
+#### 🎨 Diagramas Mermaid
+- **Use diagramas simples** que facilitem a compreensão
+- **Evite**: `graph` muito extensos, tente mantê-los concisos
+- **Nunca use**: Mapas mentais
+- **Represente atores e componentes com emojis**:
+  - 👤 Usuário/Cliente
+  - 🔧 Sistema/Processo
+  - 📦 Dados/Objetos
+  - ⚡ Operações/Ações
+  - 🔄 Estados/Transições
 
 
 ## 📁 Organização de Arquivos
