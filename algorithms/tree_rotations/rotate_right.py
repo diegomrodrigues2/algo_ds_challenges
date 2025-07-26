@@ -13,7 +13,11 @@ class TreeNode:
 
 def rotate_right(root: Optional[TreeNode]) -> Optional[TreeNode]:
     """Realiza uma rotação à direita em torno do ``root``.
-
+    
+    Esta é uma **operação atômica fundamental** que permite reestruturar
+    uma árvore binária preservando a propriedade BST. A rotação à direita
+    reduz a altura da subárvore esquerda.
+    
     A operação assume que ``root`` possui filho à esquerda. Após a
     rotação, o filho esquerdo torna-se a nova raiz e ``root`` passa a ser
     filho direito desse novo nó.
@@ -23,5 +27,16 @@ def rotate_right(root: Optional[TreeNode]) -> Optional[TreeNode]:
 
     Returns:
         Novo nó raiz após a rotação ou ``None`` se ``root`` for ``None``.
+        
+    Exemplo:
+        # Antes:     Y           Depois:    X
+        #           / \                    / \
+        #          X   C                  A   Y
+        #         / \                        / \
+        #        A   B                      B   C
+        
+        # A propriedade BST é preservada:
+        # Antes: A < X < B < Y < C
+        # Depois: A < X < B < Y < C
     """
     raise NotImplementedError("Implementar esta função")

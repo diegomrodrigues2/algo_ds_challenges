@@ -7,9 +7,15 @@ Esta pasta contém **resumos didáticos** sobre Binary Search Trees, organizados
 
 ## 📖 Estrutura dos Resumos
 
+### 🌳 [00. Introdução - O Ancestral Conceitual.md](./00.%20Introdução%20-%20O%20Ancestral%20Conceitual.md)
+**Contexto Histórico e Conceitual**
+- BST como ancestral das árvores balanceadas
+- Trade-off central: simplicidade vs vulnerabilidade
+- Propriedade fundamental e eliminação binária
+- Evolução para estruturas auto-balanceadas
+
 ### 🎯 [01. Binary Search Tree.md](./01.%20Binary%20Search%20Tree.md)
-**Conceitos Fundamentais**
-- O que é uma BST
+**Implementação e Aplicações**
 - Propriedades fundamentais
 - Complexidade das operações
 - Tipos de árvores balanceadas
@@ -40,6 +46,20 @@ Esta pasta contém **resumos didáticos** sobre Binary Search Trees, organizados
 - Cálculo de altura, mínimo e máximo
 - Contagem de nós, balanceamento
 - Sucessor e predecessor
+
+### 🚀 [06. Implementações Práticas - Primeiros Passos.md](./06.%20Implementações%20Práticas%20-%20Primeiros%20Passos.md)
+**Guias de Implementação**
+- Estratégias para `search_bst.py`
+- Algoritmos para `tree_min_max.py`
+- Pseudocódigo detalhado
+- Casos de teste essenciais
+
+### 🔗 [07. Resumo - Conexões Conceituais.md](./07.%20Resumo%20-%20Conexões%20Conceituais.md)
+**Visão Integrada**
+- Linha evolutiva das árvores
+- Trade-offs fundamentais
+- Conexões com estruturas modernas
+- Lições conceituais
 
 
 ## 🎯 Problemas Relacionados
@@ -86,11 +106,14 @@ Para qualquer nó N:
 ## 💡 Dicas de Estudo
 
 ### 🎓 **Ordem Recomendada**
-1. **Conceitos básicos** → [01. Binary Search Tree](./01.%20Binary%20Search%20Tree.md)
-2. **Operações fundamentais** → [02. Operações Básicas](./02.%20Operações%20Básicas.md)
-3. **Como percorrer** → [03. Traversal de Árvores](./03.%20Traversal%20de%20Árvores.md)
-4. **Como validar** → [04. Validação e Propriedades](./04.%20Validação%20e%20Propriedades.md)
-5. **Funcionalidades extras** → [05. Operações Avançadas](./05.%20Operações%20Avançadas.md)
+1. **Contexto conceitual** → [00. Introdução - O Ancestral Conceitual](./00.%20Introdução%20-%20O%20Ancestral%20Conceitual.md)
+2. **Implementações práticas** → [06. Implementações Práticas - Primeiros Passos](./06.%20Implementações%20Práticas%20-%20Primeiros%20Passos.md)
+3. **Conceitos básicos** → [01. Binary Search Tree](./01.%20Binary%20Search%20Tree.md)
+4. **Operações fundamentais** → [02. Operações Básicas](./02.%20Operações%20Básicas.md)
+5. **Como percorrer** → [03. Traversal de Árvores](./03.%20Traversal%20de%20Árvores.md)
+6. **Como validar** → [04. Validação e Propriedades](./04.%20Validação%20e%20Propriedades.md)
+7. **Funcionalidades extras** → [05. Operações Avançadas](./05.%20Operações%20Avançadas.md)
+8. **Visão integrada** → [07. Resumo - Conexões Conceituais](./07.%20Resumo%20-%20Conexões%20Conceituais.md)
 
 ### 🔍 **Para Prática**
 1. **Implemente cada operação** do zero
