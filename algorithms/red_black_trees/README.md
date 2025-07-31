@@ -208,9 +208,10 @@ Red-Black Trees permitem **maior desbalanceamento** que AVL, mas mantêm altura 
 ## 🚀 Próximos Passos
 
 Após dominar estas implementações:
-1. **AVL Trees** - Alternativa com altura mínima
-2. **Splay Trees** - Otimização baseada em acesso
-3. **B-Trees** - Otimização para disco
-4. **Comparação de Performance** - Testes com cargas reais
+1. **CFS Scheduler Simulation** - Aplicação real no kernel Linux
+2. **AVL Trees** - Alternativa com altura mínima
+3. **Splay Trees** - Otimização baseada em acesso
+4. **B-Trees** - Otimização para disco
+5. **Comparação de Performance** - Testes com cargas reais
 
 **Lição:** Red-Black Trees são a **escolha flexível** para aplicações **write-heavy** onde **performance de modificação** é crítica! 

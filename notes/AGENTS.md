@@ -75,3 +75,9 @@ Criar resumos didáticos e visuais de algoritmos e estrutura de dados que sejam 
 - **🚫 Máximo 1000 palavras** por documento
 - **⏰ Leitura em 3-5 minutos**
 - **🎯 Uma ideia central** por seção
+
+## 📝 Fórmulas Matemáticas
+- **Use sintaxe LaTeX** para todas as fórmulas matemáticas
+- **Exemplo**: `$f(x) = \frac{1}{k} \sum_{i \in N_k(x_0)} y_i$`
+- **Prefira**: Fórmulas inline com `$...$` para expressões simples
+- **Use**: `$$...$$` para fórmulas em bloco quando necessário

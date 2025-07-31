@@ -1,5 +1,11 @@
 # 📐 Notação Padrão
 
+## 📝 Fórmulas Matemáticas
+- **Use sintaxe LaTeX** para todas as fórmulas matemáticas
+- **Exemplo**: `$f(x) = \frac{1}{k} \sum_{i \in N_k(x_0)} y_i$`
+- **Prefira**: Fórmulas inline com `$...$` para expressões simples
+- **Use**: `$$...$$` para fórmulas em bloco quando necessário
+
 ## 🔢 Complexidade de Tempo
 - **O(1)**: Constante
 - **O(log n)**: Logarítmico

@@ -38,6 +38,13 @@ A escolha entre AVL e Red-Black representa um **clássico trade-off de engenhari
 - Comparação de complexidade
 - Casos de teste essenciais
 
+### 🐧 [05. Estudo de Caso - CFS do Linux.md](./05.%20Estudo%20de%20Caso%20-%20CFS%20do%20Linux.md)
+**Exemplo do Mundo Real**
+- Red-Black Trees no Completely Fair Scheduler
+- Análise da carga de trabalho write-heavy
+- Comparação com alternativas (AVL, Heap)
+- Impacto real na performance do sistema
+
 ## 🚀 Desafios de Implementação
 
 ### 🌟 **Árvores AVL**
@@ -80,6 +87,7 @@ Recolorações: Operações mais baratas
 2. **AVL Trees** → [02. Árvores AVL](./02.%20Árvores%20AVL%20-%20Balanceamento%20Perfeito.md)
 3. **Red-Black Trees** → [03. Red-Black Trees](./03.%20Red-Black%20Trees%20-%20Balanceamento%20Flexível.md)
 4. **Implementações práticas** → [04. Implementações Práticas](./04.%20Implementações%20Práticas%20-%20Comparação%20Direta.md)
+5. **Estudo de caso real** → [05. Estudo de Caso - CFS do Linux](./05.%20Estudo%20de%20Caso%20-%20CFS%20do%20Linux.md)
 
 ### 🔍 **Para Prática**
 1. **Compare as propriedades** de balanceamento
