@@ -20,7 +20,7 @@ Fundamentos de algoritmos de ordenação: desde algoritmos simples até implemen
 - **Implementação Recursiva**: Prefix max e selection sort
 - **Análise**: O(n²) com prova por substituição
 
-### 04. [Merge Sort](./04.%20Merge%20Sort.md)
+### 04. [Merge Sort](../04.%20Algoritmos%20Recursivos/01.%20Merge%20Sort.md)
 - **Divide-and-Conquer**: Estratégia fundamental
 - **Two-Finger Merge**: Algoritmo eficiente de combinação
 - **Análise**: O(n log n) com recorrência
@@ -56,6 +56,13 @@ Fundamentos de algoritmos de ordenação: desde algoritmos simples até implemen
 - **Variações**: Objetos, strings, faixas específicas
 - **Análise Completa**: O(n + u) tempo e espaço
 - **Aplicações**: Algoritmo auxiliar para outros sorts
+
+### 10. [Quicksort](./10.%20Quicksort.md)
+- **Divide-and-Conquer**: Estratégia fundamental de ordenação
+- **Partição de Lomuto**: Escolhe último elemento como pivô
+- **Análise Probabilística**: O(n log n) no caso médio
+- **Otimizações**: Mediana de 3, three-way partition
+- **Aplicações**: Ordenação geral, sistemas em tempo real
 
 ## 🎯 Conceitos-Chave
 

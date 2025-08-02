@@ -240,6 +240,7 @@ O **Agente Codex** será responsável por automatizar a geração dos desafios c
 #### Sorting Algorithms
 - `merge_sort.py` - ordenar uma lista usando merge sort.
 - `selection_sort.py` - ordenar uma lista usando selection sort.
+- `quicksort_lomuto.py` - ordenar uma lista usando quicksort com partição de Lomuto O(n log n) médio.
 - `set_operations.py` - operações de conjunto (união, interseção, diferença).
 - `direct_access_array_sort.py` - ordenação usando array de acesso direto O(n + u).
 - `counting_sort.py` - ordenação por contagem estável O(n + u).
@@ -251,6 +252,23 @@ O **Agente Codex** será responsável por automatizar a geração dos desafios c
 - `knapsack.py` - problema da mochila (0/1, fracionária e com itens).
 - `longest_common_subsequence.py` - subsequência comum mais longa entre strings.
 - `optimal_binary_search_tree.py` - árvore binária de busca ótima.
+
+#### Fast Multiplication
+- `karatsuba.py` - algoritmo de Karatsuba para multiplicação rápida de inteiros grandes.
+
+#### Fast Exponentiation
+- `binary_exponentiation.py` - algoritmo de exponenciação rápida (binary exponentiation) para calcular x^n mod m.
+
+#### Recursive Algorithms
+- `tower_of_hanoi.py` - resolver o quebra-cabeça da Torre de Hanói usando recursão, demonstrando a "fé recursiva".
+- `count_inversions.py` - contar inversões em um array usando variação do Mergesort, demonstrando aplicação clássica de divisão e conquista.
+- `merge_sort.py` - implementar o algoritmo Mergesort, exemplo por excelência de divisão e conquista com complexidade O(n log n) garantida.
+- `quickselect.py` - encontrar o k-ésimo menor elemento em tempo médio linear usando particionamento inteligente.
+- `median_of_medians.py` - algoritmo BFPRT para seleção em tempo linear no pior caso, garantindo performance determinística.
+- `min_max_finder.py` - encontrar mínimo e máximo em array usando 3n/2 comparações, demonstrando otimização de algoritmos.
+
+#### Backtracking
+- `n_queens.py` - resolver problema das N-Rainhas usando backtracking, exemplo prototípico de exploração sistemática de espaços de solução.
 
 #### Parallel Algorithms
 - `fibonacci_parallel.py` - cálculo de Fibonacci usando modelo fork-join.
