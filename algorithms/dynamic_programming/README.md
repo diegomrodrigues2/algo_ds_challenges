@@ -1,114 +1,183 @@
-# 🧠 Programação Dinâmica
+# Dynamic Programming Algorithms
 
-Esta pasta contém implementações de algoritmos clássicos de programação dinâmica, demonstrando diferentes técnicas e padrões de otimização.
+Este módulo contém implementações de algoritmos de programação dinâmica, demonstrando diferentes técnicas como memoização, tabulação e reconstrução de soluções.
 
-## 📁 Estrutura dos Arquivos
+## Algoritmos Implementados
 
-### 🔪 Rod Cutting (`rod_cutting.py`)
-**Problema**: Maximizar o lucro ao cortar uma barra de comprimento `n` em pedaços menores.
+### 1. Rod Cutting (Corte de Barras)
+- **Arquivo**: `rod_cutting.py`
+- **Técnica**: Programação dinâmica bottom-up
+- **Complexidade**: O(n²) tempo, O(n) espaço
+- **Aplicação**: Otimização de corte de barras de metal
 
-**Funções a implementar**:
-- `rod_cutting_recursive(prices, n)` - Solução recursiva
-- `rod_cutting_dp(prices, n)` - Programação dinâmica com memoização
-- `rod_cutting_bottom_up(prices, n)` - Abordagem bottom-up
-- `rod_cutting_with_solution(prices, n)` - Retorna cortes ótimos
+### 2. Knapsack Problem (Problema da Mochila)
+- **Arquivo**: `knapsack.py`
+- **Técnica**: Programação dinâmica 2D
+- **Complexidade**: O(n·W) tempo, O(n·W) espaço
+- **Aplicação**: Otimização de recursos com restrições
 
-**Exemplo**:
+### 3. Longest Common Subsequence (LCS)
+- **Arquivo**: `longest_common_subsequence.py`
+- **Técnica**: Programação dinâmica com reconstrução
+- **Complexidade**: O(m·n) tempo, O(m·n) espaço
+- **Aplicação**: Análise de sequências biológicas, diff de arquivos
+
+### 4. Optimal Binary Search Tree (BST Ótima)
+- **Arquivo**: `optimal_binary_search_tree.py`
+- **Técnica**: Programação dinâmica com otimização de Knuth
+- **Complexidade**: O(n³) tempo, O(n²) espaço
+- **Aplicação**: Construção de árvores de busca otimizadas
+
+### 5. Subset Sum with Memoization (Soma de Subconjuntos)
+- **Arquivo**: `subset_sum_memoization.py`
+- **Técnica**: Memoização (top-down)
+- **Complexidade**: O(n·T) tempo, O(n·T) espaço
+- **Aplicação**: Problemas de soma de subconjuntos
+
+### 6. Text Segmentation with Memoization (Segmentação de Texto) ⭐ NOVO
+- **Arquivo**: `text_segmentation_memoization.py`
+- **Técnica**: Memoização (top-down) e tabulação (bottom-up)
+- **Complexidade**: O(n²) tempo, O(n) espaço
+- **Aplicação**: Segmentação de texto sem espaços
+- **Referência**: Erickson, "Algorithms", Capítulo 3, Seção 3.3, "Interpunctio Verborum Redux"
+
+## Desafio 22: Segmentação de Texto com Memoização
+
+### Visão Geral
+O problema de segmentação de texto (Word Break) consiste em determinar se uma string sem espaços pode ser segmentada em uma sequência de palavras válidas usando um dicionário.
+
+### Implementações Disponíveis
+
+#### 1. Memoização (Top-Down)
 ```python
-prices = [0, 1, 5, 8, 9, 10, 17, 17, 20]
-n = 4
-# Solução: 2 + 2 = 5 + 5 = 10 (lucro máximo)
+text_segmentation_memoization(text: str, dictionary: Set[str]) -> Optional[List[str]]
+```
+- **Estado**: Índice inicial do sufixo da string
+- **Complexidade**: O(n²) tempo, O(n) espaço
+- **Vantagem**: Evita recálculos com cache
+
+#### 2. Backtracking Puro
+```python
+text_segmentation_backtracking(text: str, dictionary: Set[str]) -> Optional[List[str]]
+```
+- **Complexidade**: O(2^n) tempo, O(n) espaço
+- **Uso**: Comparação de performance
+
+#### 3. Tabulação (Bottom-Up)
+```python
+text_segmentation_tabulation(text: str, dictionary: Set[str]) -> Optional[List[str]]
+```
+- **Complexidade**: O(n²) tempo, O(n) espaço
+- **Vantagem**: Sem overhead de recursão
+
+#### 4. Memoização Otimizada
+```python
+text_segmentation_optimized_memoization(text: str, dictionary: Set[str]) -> Optional[List[str]]
+```
+- **Otimizações**: Ordenação decrescente de tentativas
+- **Benefício**: Pode encontrar soluções mais rapidamente
+
+### Exemplo de Uso
+
+```python
+from text_segmentation_memoization import text_segmentation_memoization
+
+# Dicionário de palavras válidas
+dictionary = {"i", "like", "gfg", "programming"}
+
+# Texto para segmentar
+text = "ilikegfg"
+
+# Segmentação
+result = text_segmentation_memoization(text, dictionary)
+print(result)  # ['i', 'like', 'gfg']
 ```
 
-### 🎒 Knapsack (`knapsack.py`)
-**Problema**: Selecionar itens com pesos e valores para maximizar valor total sem exceder capacidade.
+### Análise de Complexidade
 
-**Funções a implementar**:
-- `knapsack_recursive(weights, values, capacity)` - Solução recursiva
-- `knapsack_dp(weights, values, capacity)` - Programação dinâmica
-- `knapsack_01(weights, values, capacity)` - Mochila 0/1 (sem repetição)
-- `knapsack_fractional(weights, values, capacity)` - Mochila fracionária
-- `knapsack_with_items(weights, values, capacity)` - Retorna itens selecionados
+#### Subproblemas Sobrepostos
+- **Estado**: `dp[i]` = "O sufixo text[i..n] pode ser segmentado?"
+- **Estados possíveis**: n (um para cada posição inicial)
+- **Sobreposição**: Múltiplos caminhos podem chegar ao mesmo estado
 
-**Exemplo**:
+#### Estrutura Ótima
+- Se `text[i..j]` é uma palavra válida e `text[j..n]` pode ser segmentado,
+  então `text[i..n]` pode ser segmentado
+- **Fórmula**: `dp[i] = OR(dp[j] AND is_word(text[i..j]))` para todo j > i
+
+#### Melhoria de Performance
+- **Backtracking**: O(2^n) - exponencial
+- **Memoização**: O(n²) - quadrático
+- **Melhoria**: Reduz de exponencial para polinomial
+
+### Casos de Teste
+
 ```python
-weights = [1, 2, 3]
-values = [10, 15, 20]
-capacity = 4
-# Solução: itens 1 e 2 (peso=3, valor=25)
+# Casos básicos
+("ilike", {"i", "like", "gfg"}, ["i", "like"])
+("ilikegfg", {"i", "like", "gfg"}, ["i", "like", "gfg"])
+("ilikemangoes", {"i", "like", "gfg"}, None)
+
+# Casos com múltiplas soluções
+("catsanddog", {"cat", "cats", "and", "sand", "dog"}, ["cat", "sand", "dog"])
+
+# Casos extremos
+("", {"a", "b"}, [])
+("a", {"a"}, ["a"])
+("a", {"b"}, None)
 ```
 
-### 📝 Longest Common Subsequence (`longest_common_subsequence.py`)
-**Problema**: Encontrar a subsequência comum mais longa entre duas strings.
+### Benchmark de Performance
 
-**Funções a implementar**:
-- `lcs_recursive(str1, str2)` - Solução recursiva
-- `lcs_dp(str1, str2)` - Programação dinâmica
-- `lcs_with_string(str1, str2)` - Retorna a subsequência
-- `lcs_three_strings(str1, str2, str3)` - LCS para três strings
-- `lcs_palindrome(str1)` - Subsequência palíndroma mais longa
+| Tamanho | Backtracking | Memoização | Tabulação | Otimizada |
+|---------|-------------|------------|-----------|-----------|
+| 10      | 0.0016s     | 0.0000s    | 0.0000s   | 0.0010s   |
+| 20      | 0.0000s     | 0.0000s    | 0.0000s   | 0.0000s   |
+| 30      | Muito lento | 0.0000s    | 0.0000s   | 0.0000s   |
+| 40      | Muito lento | 0.0000s    | 0.0000s   | 0.0000s   |
+| 50      | Muito lento | 0.0000s    | 0.0021s   | 0.0015s   |
 
-**Exemplo**:
-```python
-str1 = "ABCDGH"
-str2 = "AEDFHR"
-# LCS: "ADH" (comprimento 3)
-```
+### Vínculos Conceituais
 
-### 🌳 Optimal Binary Search Tree (`optimal_binary_search_tree.py`)
-**Problema**: Construir árvore binária de busca que minimize custo médio de busca.
+1. **Erickson, "Algorithms"**: Capítulo 3, Seção 3.3, "Interpunctio Verborum Redux"
+2. **GeeksforGeeks**: [Word Break Problem](https://www.geeksforgeeks.org/dsa/word-break-problem-dp-32/)
+3. **Tutorial Horizon**: [The Word Break Problem](https://tutorialhorizon.com/algorithms/the-word-break-problem/)
 
-**Funções a implementar**:
-- `optimal_bst_basic(keys, probabilities)` - Solução básica
-- `optimal_bst_with_tree(keys, probabilities)` - Retorna árvore ótima
-- `optimal_bst_knuth_optimization(keys, probabilities)` - Otimização de Knuth
-- `optimal_bst_space_optimized(keys, probabilities)` - Otimização de espaço
+### Arquivos Relacionados
 
-**Exemplo**:
-```python
-keys = [10, 20, 30, 40]
-probabilities = [0.1, 0.3, 0.2, 0.4]
-# Custo mínimo: 1.9 (árvore com 20 como raiz)
-```
+- `text_segmentation_memoization.py` - Implementação principal
+- `test_text_segmentation_memoization.py` - Testes unitários
+- `example_text_segmentation_memoization.py` - Exemplos de demonstração
 
-## 🧪 Execução dos Testes
+## Como Executar
 
-Para executar todos os testes de programação dinâmica:
+### Testes
 ```bash
-pytest algorithms/dynamic_programming/
+cd algorithms/dynamic_programming
+python test_text_segmentation_memoization.py
 ```
 
-Para executar testes específicos:
+### Exemplo de Demonstração
 ```bash
-# Apenas rod cutting
-pytest algorithms/dynamic_programming/test_rod_cutting.py
-
-# Apenas knapsack
-pytest algorithms/dynamic_programming/test_knapsack.py
-
-# Apenas LCS
-pytest algorithms/dynamic_programming/test_longest_common_subsequence.py
+cd algorithms/dynamic_programming
+python example_text_segmentation_memoization.py
 ```
 
-## 🎯 Conceitos Aprendidos
+### Benchmark
+```bash
+cd algorithms/dynamic_programming
+python text_segmentation_memoization.py
+```
 
-### 📊 Padrões de Programação Dinâmica
-- **Subestrutura Ótima**: Solução ótima contém soluções ótimas dos subproblemas
-- **Subproblemas Sobrepostos**: Mesmos subproblemas aparecem múltiplas vezes
-- **Memoização**: Armazenar resultados para evitar recálculos
+## Conceitos Demonstrados
 
-### 🔄 Estratégias de Implementação
-- **Top-Down**: Recursiva com memoização
-- **Bottom-Up**: Iterativa com tabela de resultados
-- **Reconstrução**: Rastrear escolhas para reconstruir solução
+1. **Transição de Backtracking para PD**: O(2^n) → O(n²)
+2. **Estado do Subproblema**: Índice inicial do sufixo
+3. **Subproblemas Sobrepostos**: Múltiplos caminhos para o mesmo estado
+4. **Estrutura Ótima**: Decomposição em subproblemas menores
+5. **Técnicas de Otimização**: Ordenação de tentativas, cache eficiente
+6. **Análise de Complexidade**: Comparação prática de abordagens
 
-### ⚡ Otimizações
-- **Espaço**: Reduzir uso de memória (apenas últimas linhas/colunas)
-- **Tempo**: Early termination em condições específicas
-- **Cache**: Estruturas eficientes para memoização
+## Contribuições
 
-## 📚 Recursos Adicionais
-
-- **Notas Teóricas**: `notes/03. Algoritmos de Programação Dinâmica/`
-- **Exemplos Práticos**: Cada arquivo contém exemplos comentados
-- **Casos de Teste**: Cobertura abrangente incluindo casos extremos 
+Este módulo demonstra a evolução de algoritmos de backtracking para programação dinâmica, mostrando como a identificação de subproblemas sobrepostos pode levar a melhorias dramáticas de performance. 

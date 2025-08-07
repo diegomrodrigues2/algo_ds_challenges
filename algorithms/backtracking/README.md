@@ -1250,3 +1250,305 @@ Os testes cobrem:
 3. **Permutações Lexicográficas**: Ordem específica de geração
 4. **Permutações Parciais**: k-permutações de n elementos
 5. **Permutações Circulares**: Permutações em anel 
+
+## Graph Coloring (Coloração de Grafos)
+
+### Visão Geral
+
+O problema de Coloração de Grafos é um problema NP-completo clássico que envolve atribuir cores aos vértices de um grafo de forma que vértices adjacentes tenham cores diferentes. É uma aplicação direta do backtracking para resolver problemas de satisfação de restrições em grafos.
+
+### Estratégia do Algoritmo
+
+O algoritmo de backtracking funciona da seguinte forma:
+
+1. **Exploração Sistemática**: Para cada vértice, tenta atribuir uma cor de 1 a m
+2. **Verificação de Validade**: Verifica se a cor é válida em relação aos vizinhos já coloridos
+3. **Backtrack Inteligente**: Se uma atribuição falha, volta e tenta outra cor
+4. **Poda por Restrições**: Elimina ramificações inválidas precocemente
+
+### Complexidade
+
+- **Tempo**: O(m^V) - no pior caso, tenta m cores para cada vértice
+- **Espaço**: O(V) - profundidade da pilha de recursão
+- **NP-Completo**: O problema é NP-completo, mas backtracking é a base para otimizações
+
+### Funções Implementadas
+
+#### `graph_coloring_backtracking(graph, m)`
+Resolve o problema de coloração de grafos usando backtracking recursivo básico.
+
+**Parâmetros:**
+- `graph`: Matriz de adjacência do grafo (V x V)
+- `m`: Número máximo de cores disponíveis
+
+**Retorna:** Lista de cores atribuídas aos vértices (1 a m), ou None se não for possível
+
+#### `graph_coloring_optimized(graph, m)`
+Versão otimizada com ordenação de vértices por grau e heurísticas.
+
+#### `graph_coloring_count_solutions(graph, m)`
+Conta quantas soluções existem para o problema.
+
+#### `graph_coloring_all_solutions(graph, m)`
+Encontra todas as soluções para o problema.
+
+#### `graph_coloring_with_memoization(graph, m)`
+Versão com memoização para evitar recálculos.
+
+#### `analyze_graph_coloring_complexity(graph, m)`
+Analisa a complexidade do problema para os dados fornecidos.
+
+### Exemplo de Uso
+
+```python
+from algorithms.backtracking.graph_coloring import graph_coloring_backtracking
+
+# Exemplo básico
+graph = [
+    [0, 1, 0, 1],
+    [1, 0, 1, 0],
+    [0, 1, 0, 1],
+    [1, 0, 1, 0]
+]
+m = 2
+result = graph_coloring_backtracking(graph, m)
+print(f"Coloração: {result}")  # [1, 2, 1, 2] ou similar
+
+# Exemplo sem solução
+graph = [
+    [0, 1, 1, 1],
+    [1, 0, 1, 0],
+    [1, 1, 0, 1],
+    [1, 0, 1, 0]
+]
+m = 2
+result = graph_coloring_backtracking(graph, m)
+print(f"Coloração: {result}")  # None
+
+# Contar soluções
+count = graph_coloring_count_solutions(graph, 3)
+print(f"Número de soluções: {count}")
+```
+
+### Referências
+
+- **InterviewBit**: [Graph Coloring Algorithm using Backtracking](https://www.interviewbit.com/courses/programming/backtracking/graph-coloring-algorithm-using-backtracking/)
+- **GeeksforGeeks**: [M-Coloring Problem](https://www.geeksforgeeks.org/dsa/m-coloring-problem-in-python/)
+- **TheAlgorithms/Python**: [coloring.py](https://github.com/TheAlgorithms/Python/blob/master/backtracking/coloring.py)
+- **CSP Map Coloring**: [CSP-Map-coloring-using-Backtracking](https://github.com/jaiswalchitransh/CSP-Map-coloring-using-Backtracking)
+
+### Análise da Complexidade
+
+A relação de recorrência é:
+```
+T(V) = m × T(V-1) + O(V)
+```
+
+A solução é:
+```
+T(V) = O(m^V)
+```
+
+### Otimizações Implementadas
+
+#### 1. Ordenação por Grau
+```python
+degrees = [sum(graph[i]) for i in range(V)]
+vertex_order = sorted(range(V), key=lambda x: degrees[x], reverse=True)
+```
+- Colore vértices de maior grau primeiro
+- Reduz o número de backtrackings necessários
+
+#### 2. Verificação Eficiente
+```python
+def is_safe(vertex, color):
+    for i in range(V):
+        if graph[vertex][i] == 1 and colors[i] == color:
+            return False
+    return True
+```
+- Verifica apenas vértices adjacentes
+- Early termination quando possível
+
+#### 3. Memoização
+```python
+def get_state_key(vertex):
+    return f"{vertex}:{tuple(colors[:vertex])}"
+```
+- Evita recálculos de estados já visitados
+- Melhora performance para grafos com padrões repetitivos
+
+### Aplicações Práticas
+
+1. **Coloração de Mapas**: Países vizinhos com cores diferentes
+2. **Agendamento de Exames**: Exames simultâneos com horários diferentes
+3. **Alocação de Registradores**: Variáveis simultâneas em registradores diferentes
+4. **Problema do Sudoku**: Células na mesma linha/coluna/bloco com números diferentes
+5. **Design de Redes**: Canais de comunicação sem interferência
+
+### Insights Teóricos
+
+1. **Número Cromático**: Menor número de cores necessárias
+2. **Grafo Bipartido**: Grafos que podem ser coloridos com 2 cores
+3. **Teorema das Quatro Cores**: Qualquer mapa planar pode ser colorido com 4 cores
+4. **Heurísticas de Coloração**: Estratégias para melhorar a eficiência
+5. **Conexão com CSP**: Problema de Satisfação de Restrições
+
+### Variações do Problema
+
+1. **Coloração de Arestas**: Colorir arestas em vez de vértices
+2. **Coloração Lista**: Cada vértice tem uma lista de cores permitidas
+3. **Coloração Total**: Colorir vértices e arestas simultaneamente
+4. **Coloração com Pesos**: Minimizar custo total das cores usadas
+5. **Coloração Online**: Decidir cores sem conhecer o grafo completo
+
+## Hamiltonian Path (Caminho Hamiltoniano)
+
+### Visão Geral
+
+O problema do Caminho Hamiltoniano é um problema NP-completo clássico que envolve encontrar um caminho em um grafo que visite todos os vértices exatamente uma vez. É uma aplicação direta do backtracking para resolver problemas de busca em grafos.
+
+### Estratégia do Algoritmo
+
+O algoritmo de backtracking funciona da seguinte forma:
+
+1. **Exploração Sistemática**: Constrói um caminho passo a passo
+2. **Verificação de Adjacência**: Tenta adicionar vértices adjacentes não visitados
+3. **Backtrack Inteligente**: Se um caminho não pode ser estendido, volta e tenta outro vizinho
+4. **Poda por Visitação**: Elimina vértices já visitados
+
+### Complexidade
+
+- **Tempo**: O(V!) - no pior caso, explora todas as permutações possíveis
+- **Espaço**: O(V) - profundidade da pilha de recursão
+- **NP-Completo**: O problema é NP-completo, mas backtracking é a base para otimizações
+
+### Funções Implementadas
+
+#### `hamiltonian_path_backtracking(graph)`
+Resolve o problema do Caminho Hamiltoniano usando backtracking recursivo básico.
+
+**Parâmetros:**
+- `graph`: Matriz de adjacência do grafo (V x V)
+
+**Retorna:** Lista com a ordem dos vértices no caminho Hamiltoniano, ou None se não existir
+
+#### `hamiltonian_cycle_backtracking(graph)`
+Resolve o problema do Ciclo Hamiltoniano (caminho que forma um ciclo).
+
+#### `hamiltonian_path_optimized(graph)`
+Versão otimizada com ordenação de vértices por grau e heurísticas.
+
+#### `hamiltonian_path_count_solutions(graph)`
+Conta quantas soluções existem para o problema.
+
+#### `hamiltonian_path_all_solutions(graph)`
+Encontra todas as soluções para o problema.
+
+#### `hamiltonian_path_with_memoization(graph)`
+Versão com memoização para evitar recálculos.
+
+#### `analyze_hamiltonian_path_complexity(graph)`
+Analisa a complexidade do problema para os dados fornecidos.
+
+### Exemplo de Uso
+
+```python
+from algorithms.backtracking.hamiltonian_path import hamiltonian_path_backtracking
+
+# Exemplo básico
+graph = [
+    [0, 1, 0, 1],
+    [1, 0, 1, 0],
+    [0, 1, 0, 1],
+    [1, 0, 1, 0]
+]
+result = hamiltonian_path_backtracking(graph)
+print(f"Caminho Hamiltoniano: {result}")  # [0, 1, 2, 3] ou similar
+
+# Exemplo sem solução
+graph = [
+    [0, 1, 0, 0],
+    [1, 0, 1, 0],
+    [0, 1, 0, 0],
+    [0, 0, 0, 0]
+]
+result = hamiltonian_path_backtracking(graph)
+print(f"Caminho Hamiltoniano: {result}")  # None
+
+# Contar soluções
+count = hamiltonian_path_count_solutions(graph)
+print(f"Número de soluções: {count}")
+```
+
+### Referências
+
+- **Wikipedia**: [Hamiltonian path problem](https://en.wikipedia.org/wiki/Hamiltonian_path_problem)
+- **HackerEarth**: [Hamiltonian Path Tutorial](https://www.hackerearth.com/practice/algorithms/graphs/hamiltonian-path/tutorial/)
+- **TheAlgorithms/Python**: [hamiltonian_cycle.py](https://github.com/TheAlgorithms/Python/blob/master/backtracking/hamiltonian_cycle.py)
+- **NetworkX Implementation**: [mikkelam/hamilton.py](https://gist.github.com/mikkelam/ab7966e7ab1c441f947b)
+
+### Análise da Complexidade
+
+A relação de recorrência é:
+```
+T(V) = V × T(V-1) + O(V)
+```
+
+A solução é:
+```
+T(V) = O(V!)
+```
+
+### Otimizações Implementadas
+
+#### 1. Ordenação por Grau
+```python
+degrees = [sum(graph[i]) for i in range(V)]
+vertex_order = sorted(range(V), key=lambda x: degrees[x], reverse=True)
+```
+- Tenta vértices de maior grau primeiro
+- Reduz o número de backtrackings necessários
+- Aproveita vértices mais conectados cedo
+
+#### 2. Verificação Eficiente
+```python
+if (graph[vertex][next_vertex] == 1 and 
+    not visited[next_vertex]):
+```
+- Verifica adjacência e visitação em O(1)
+- Early termination quando possível
+- Evita tentativas desnecessárias
+
+#### 3. Memoização
+```python
+def get_state_key(vertex, path_count):
+    return f"{vertex}:{path_count}:{tuple(visited)}"
+```
+- Evita recálculos de estados já visitados
+- Melhora performance para grafos com padrões repetitivos
+- Trade-off entre tempo e espaço
+
+### Aplicações Práticas
+
+1. **Problema do Caixeiro Viajante (TSP)**: Encontrar rota mais curta visitando todas as cidades
+2. **Sequenciamento de DNA**: Reconstruir sequência genética a partir de fragmentos
+3. **Design de Circuitos**: Conectar componentes sem cruzar fios
+4. **Agendamento de Tarefas**: Ordenar tarefas com dependências
+5. **Roteamento de Pacotes**: Encontrar rota ótima em rede de computadores
+
+### Insights Teóricos
+
+1. **Condições Necessárias**: Grau mínimo ≥ 1 para caminho, ≥ 2 para ciclo
+2. **Condições Suficientes**: Grafo completo sempre tem caminho Hamiltoniano
+3. **Conexão com TSP**: Caminho Hamiltoniano é caso especial do TSP
+4. **Heurísticas**: Ordenação por grau melhora performance prática
+5. **Conexão com Permutações**: Cada caminho é uma permutação dos vértices
+
+### Variações do Problema
+
+1. **Ciclo Hamiltoniano**: Caminho que forma um ciclo
+2. **Caminho Hamiltoniano Direcionado**: Em grafos direcionados
+3. **Caminho Hamiltoniano com Pesos**: Minimizar custo total
+4. **Caminho Hamiltoniano com Restrições**: Limitações na ordem de visitação
+5. **Caminho Hamiltoniano Online**: Decidir sem conhecer o grafo completo

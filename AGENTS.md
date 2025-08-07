@@ -205,3 +205,87 @@ notes/
 ```
 
 Cada área terá sua própria estrutura de notas teóricas complementando os desafios práticos.
+
+## 🧠 Implementações Específicas - Programação Dinâmica
+
+### Soma de Subconjuntos com Memoização
+
+#### 🎯 Visão Geral
+Implementação do problema da Soma de Subconjuntos usando memoização, demonstrando a transição fundamental de backtracking exponencial para programação dinâmica eficiente.
+
+#### 🔗 Vínculos Conceituais
+- **Erickson, "Algorithms"**: Capítulo 3, Seção 3.1, "Memo(r)ization"
+- **Teoria**: [Erickson sobre Programação Dinâmica](https://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf)
+- **Implementação**: [GeeksforGeeks - Subset Sum DP](https://www.geeksforgeeks.org/dsa/subset-sum-problem-dp-25/)
+- **Comparação**: [Memoização vs Tabulação](https://www.geeksforgeeks.org/dsa/tabulation-vs-memoization/)
+
+#### 🧠 Análise de Especialista
+A transição do backtracking O(2^n) para programação dinâmica O(n·T) é a quintessência da PD:
+- **Estado (i, t)**: "Existe subconjunto de X[i..n] que soma t?"
+- **Memoização**: Cache para evitar recálculos exponenciais
+- **Recursão Inteligente**: PD como otimização de algoritmos recursivos
+
+#### ⚙️ Estrutura da Implementação
+```python
+def subset_sum_memoization(nums: List[int], target: int) -> bool:
+    """
+    Resolve Soma de Subconjuntos usando memoização.
+    
+    Args:
+        nums: Lista de números inteiros
+        target: Valor alvo a ser alcançado
+        
+    Returns:
+        True se existe subconjunto que soma target, False caso contrário
+    """
+    # Cache para memoização
+    memo = {}
+    
+    def dp(i: int, t: int) -> bool:
+        # Verifica se resultado já está no cache
+        if (i, t) in memo:
+            return memo[(i, t)]
+        
+        # Casos base
+        if t == 0:
+            return True
+        if i >= len(nums) or t < 0:
+            return False
+        
+        # Recursão com memoização
+        result = dp(i + 1, t - nums[i]) or dp(i + 1, t)
+        memo[(i, t)] = result
+        return result
+    
+    return dp(0, target)
+```
+
+#### 🚀 Funcionalidades Principais
+1. **Memoização Top-Down**: Cache para evitar recálculos
+2. **Transição de Backtracking**: Otimização de solução recursiva
+3. **Complexidade Pseudo-Polinomial**: O(n·T) onde T é o valor alvo
+4. **Identificação de Estado**: Par (i, t) representa subproblema único
+
+#### 📊 Complexidade e Limitações
+- **Tempo**: O(n·T) pseudo-polinomial
+- **Espaço**: O(n·T) para cache de memoização
+- **Vantagem**: Reduz complexidade exponencial para pseudo-polinomial
+- **Limitação**: Ainda pode ser lento para valores de target muito grandes
+
+#### 🎯 Aplicações Práticas
+- **Problemas de Otimização**: Alocação de recursos, balanceamento de carga
+- **Teoria da Computação**: Exemplo clássico de NP-completeness
+- **Educação em PD**: Demonstra transição de força bruta para eficiência
+- **Base para Outros Problemas**: Knapsack, Partition, Coin Change
+
+#### ⚡ Otimizações Implementadas
+1. **Cache de Memoização**: Evita recálculos de subproblemas
+2. **Identificação de Estado**: Par (i, t) como chave única
+3. **Pruning Inteligente**: Para quando t < 0 ou t == 0
+4. **Transição Suave**: Mantém estrutura recursiva original
+
+#### 🧪 Testes e Validação
+- **Testes Unitários**: Casos básicos, casos extremos, casos de borda
+- **Testes de Performance**: Comparação com backtracking puro
+- **Análise de Complexidade**: Validação da redução de complexidade
+- **Casos de Stress**: Testes com valores grandes de target

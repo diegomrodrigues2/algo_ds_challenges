@@ -252,6 +252,7 @@ O **Agente Codex** será responsável por automatizar a geração dos desafios c
 - `knapsack.py` - problema da mochila (0/1, fracionária e com itens).
 - `longest_common_subsequence.py` - subsequência comum mais longa entre strings.
 - `optimal_binary_search_tree.py` - árvore binária de busca ótima.
+- `subset_sum_memoization.py` - soma de subconjuntos com memoização (transição de O(2^n) para O(n·T)).
 
 #### Fast Multiplication
 - `karatsuba.py` - algoritmo de Karatsuba para multiplicação rápida de inteiros grandes.

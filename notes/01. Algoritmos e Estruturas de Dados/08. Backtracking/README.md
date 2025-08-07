@@ -12,6 +12,24 @@ Backtracking é uma estratégia para encontrar soluções para problemas computa
 - **Otimizações**: Arrays auxiliares, quebra de simetria
 - **Aplicações**: Puzzles, scheduling, circuit design
 
+### 07. [Graph Coloring](./07.%20Graph%20Coloring.md)
+- **Problema NP-Completo**: Coloração de vértices em grafos
+- **Satisfação de Restrições**: Vértices adjacentes com cores diferentes
+- **Aplicações Práticas**: Mapas, agendamento, alocação de recursos
+- **Conexão com CSP**: Problema de Satisfação de Restrições
+
+### 08. [Hamiltonian Path](./08.%20Hamiltonian%20Path.md)
+- **Problema NP-Completo**: Caminho que visita todos os vértices uma vez
+- **Busca em Grafos**: Exploração sistemática de caminhos
+- **Aplicações Práticas**: TSP, sequenciamento de DNA, design de circuitos
+- **Conexão com Ciclos**: Variante do Ciclo Hamiltoniano
+
+### 09. [Jogo da Velha Generalizado](./09.%20Jogo%20da%20Velha%20Generalizado.md)
+- **Algoritmo Minimax**: Aplicação formal do backtracking em árvores de jogo
+- **Jogos de Dois Jogadores**: Exploração de todos os movimentos possíveis
+- **Poda Alpha-Beta**: Otimização que reduz significativamente o espaço de busca
+- **Aplicações Práticas**: IA em jogos, teoria dos jogos, algoritmos competitivos
+
 ## 🎯 Conceitos-Chave
 
 ### 🔄 Estratégia de Backtracking

@@ -73,6 +73,32 @@
 - **quiescent**: Objeto sem chamadas pendentes
 - **linearization point**: Momento de efeito instantâneo
 
+## 🧠 Programação Dinâmica
+- **T(n)**: Função de tempo para entrada de tamanho n
+- **M(i, t)**: Cache de memoização para subproblema (i, t)
+- **dp[i][j]**: Tabela de programação dinâmica na posição (i, j)
+- **subproblema**: Problema menor que compõe o problema original
+- **estado**: Informações necessárias para resolver um subproblema
+- **memoização**: Cache top-down para evitar recálculos
+- **tabelação**: Construção bottom-up da tabela de soluções
+- **pseudo-polinomial**: Complexidade O(n·T) onde T é o valor alvo
+
+### 📝 Segmentação de Texto
+- **S**: String de entrada sem espaços
+- **D**: Dicionário de palavras válidas
+- **dp[i]**: "O sufixo S[i..n] pode ser segmentado?"
+- **w₁, w₂, ..., wₖ**: Palavras da segmentação
+- **text[i..j]**: Substring de text da posição i até j-1
+- **is_word(prefix)**: Função que verifica se prefixo é palavra válida
+
+### 📈 LIS (Longest Increasing Subsequence)
+- **A**: Array de entrada de números inteiros
+- **LISbigger(i, j)**: "LIS começando em i com elemento anterior em j"
+- **dp[i][j]**: Cache para memoização do estado (i, j)
+- **L[i]**: Comprimento da LIS terminando na posição i
+- **prev[i]**: Índice do elemento anterior na LIS terminando em i
+- **subsequência**: Elementos A[i₁], A[i₂], ..., A[iₖ] onde i₁ < i₂ < ... < iₖ
+
 ## 🔗 Registradores e Memória Compartilhada
 - **SRSW**: Single-Reader, Single-Writer
 - **MRSW**: Multi-Reader, Single-Writer
